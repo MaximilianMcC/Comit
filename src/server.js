@@ -7,8 +7,9 @@ const port = 3000;
 
 
 
-// Stuff that I forgot the name of
-app.use(express.static(path.join("public")));
+// Load the landing page by default
+// TODO: Once logged in, auto redirect to the main actual "app" page
+app.use(express.static(path.join("public", "landing")));
 
 
 

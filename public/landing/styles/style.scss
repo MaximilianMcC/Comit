@@ -1,0 +1,61 @@
+// TODO: Make a default stylesheet that all pages and whatnot use
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	// TODO: Maybe don't set font here
+	font-family: 'Inter', sans-serif;
+}
+
+// TODO: Make topography stylesheet with this crap
+h1, h2, h3, h4, h5, h6, .button {
+	font-weight: 900;
+}
+
+
+body {
+	background-color: #171717;
+	color: #f1f1f1;
+}
+
+
+header {
+
+	.content {
+		padding: 10rem 15rem;
+
+		h1 { font-size: 15rem; }
+		h2 { font-size: 1.5rem; }
+
+		.buttons {
+			margin-top: 8rem;
+
+			a {
+				display: inline-block;
+
+				background-color: #2b2b2b;
+				color: #f1f1f1;
+				border: none;
+				text-decoration: none;
+
+				padding: 15px 30px;
+				font-size: 1.1rem;
+				margin-right: 10px;
+
+				border-radius: 5px;
+				box-shadow: 0px 8px darken(#2b2b2b, 10);
+
+				&:hover {
+					transform: translateY(3px);
+					box-shadow: 0px 5px darken(#2b2b2b, 10);
+				}
+
+				&:active {
+					transform: translateY(5px);
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
