@@ -8,21 +8,26 @@
 	font-family: 'Inter', sans-serif;
 }
 
+body, html {
+	background-color: #171717;
+	height: 100%;
+}
+
 // TODO: Make topography stylesheet with this crap
 h1, h2, h3, h4, h5, h6, .button {
+	color: #f1f1f1;
 	font-weight: 900;
 }
 
 
-body {
-	background-color: #171717;
-	color: #f1f1f1;
-}
-
 
 header {
+	position: relative;
+	height: 100%;
 
 	.content {
+		position: relative;
+		z-index: 999;
 		padding: 10rem 15rem;
 
 		h1 { font-size: 15rem; }
@@ -32,23 +37,26 @@ header {
 			margin-top: 8rem;
 
 			a {
-				display: inline-block;
+				$button-background: #2b2b2b;
+				// $button-background: #bb15bb;
 
-				background-color: #2b2b2b;
-				color: #f1f1f1;
+				display: inline-block;
 				border: none;
+				
+				background-color: $button-background;
+				color: #f1f1f1;
+				font-size: 1.1rem;
 				text-decoration: none;
 
 				padding: 15px 30px;
-				font-size: 1.1rem;
 				margin-right: 10px;
 
 				border-radius: 5px;
-				box-shadow: 0px 8px darken(#2b2b2b, 10);
+				box-shadow: 0px 8px darken($button-background, 10);
 
 				&:hover {
 					transform: translateY(3px);
-					box-shadow: 0px 5px darken(#2b2b2b, 10);
+					box-shadow: 0px 5px darken($button-background, 10);
 				}
 
 				&:active {
@@ -56,6 +64,21 @@ header {
 					box-shadow: none;
 				}
 			}
+		}
+	}
+
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -999;
+
+		svg {
+			background-color: green;
+			// width: 100%;
+			// height: 100%;
 		}
 	}
 }

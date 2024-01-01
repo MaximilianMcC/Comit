@@ -10,17 +10,22 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<script src="./script.js"></script>
 </head>
 <body>
-	
+
 	<!-- Landing page thingy -->
 	<!-- TODO: Hyperplexed canva star trail thing -->
 	<!-- TODO: Random stars in the background -->
 	<!-- TODO: Make responsive before its too late😬😬 -->
+	<!-- TODO: Make a checkered thingy where its heaps of green tiles at the bottom kinda fading out/in -->
+
 
 	<header>
-		
-		<div class="content">
+	
+		<section class="content">
+
 			<!-- Main title -->
 			<h1>Comit</h1>
 	
@@ -28,11 +33,27 @@
 			<h2>Daily activity tracking app focused<br>on maintaining a streak.</h2>
 	
 			<!-- Login buttons -->
+			<!-- TODO: Make it a purple-ish color -->
 			<div class="buttons">
 				<a class="button" href="#">Login</a>
 				<a class="button" href="#">Create Account</a>
 			</div>
-		</div>
+		</section>
+		
+		<!-- Stars and comet SVG background -->
+		<section class="background">
+			
+			<svg viewBox="0,0 100,100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+
+				<!-- !debug-->
+				<rect width="10" height="10" fill="blue"/>
+
+				<!-- Stars are dynamically added to the SVG via js-->
+
+				<!-- TODO: Add logo -->
+			</svg>
+
+		</section>
 
 	</header>
 
