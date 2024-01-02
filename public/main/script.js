@@ -9,12 +9,20 @@ function generateStars() {
 	// Make a star
 	// TODO: Don't use arrow function, but idk
 	const star = () => {
-
-		//! Do NOT use this (prolly beyond bad practice)
+		//! Don't do this. Use real decimal random method
+		// Get a random radius
+		// TODO: Do another way
 		const radiuses = [0.3, 0.4, 0.5, 0.6, 0.7];
-		const radius = radiuses[random(0, radiuses.length - 1)];
+		const radius = randomElement(radiuses);
 
-		return `<circle cx="${random(60, 100)}" cy="${random(0, 100)}" r="${radius}" fill="white"/>`;
+		// Get a random color for the star
+		// TODO: Maybe make the stars subtlety twinkle
+		// TODO: Maybe make the svg stars interact with mouse cursor. Get pushed out of the way or something
+		const colors = ["#dad4d4", "#ffd6d6", "#ffffff"];
+		const color =  randomElement(colors);
+
+		//! Don't use 140 as max X. Should be 100 but svg messed up
+		return `<circle cx="${random(60, 140)}" cy="${random(0, 100)}" r="${radius}" fill="${color}"/>`;
 	};
 
 	// Make a random amount of stars
@@ -26,7 +34,10 @@ function generateStars() {
 	svg.innerHTML += starsSvg;
 }
 
-
 function random(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function randomElement(array) {
+	return array[random(0, array.length - 1)];
 }

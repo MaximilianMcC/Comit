@@ -11,6 +11,10 @@
 body, html {
 	background-color: #171717;
 	height: 100%;
+
+	//TODO: Remove
+	//! Don't do this bad practice I think
+	max-height: 99vh;
 }
 
 // TODO: Make topography stylesheet with this crap
@@ -73,12 +77,10 @@ header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -999;
 
 		svg {
-			background-color: green;
-			// width: 100%;
-			// height: 100%;
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
